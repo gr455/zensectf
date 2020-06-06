@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Art</title>
+  <title>FREE FLAGS EXTREME!!!</title>
   <style>
  ul {
   position: fixed;
