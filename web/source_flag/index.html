@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>MAFS</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles/layout.css" type="text/css">
+</head>
+<body onload="rng()">
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">MAFS</a></h1>
+      <h2>can you beat Mr Succ?</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Text Link</a></li>
+        <li><a href="#">Text Link</a></li>
+        <li><a href="#">Text Link</a></li>
+        <li><a href="#">Text Link</a></li>
+        <li class="last"><a href="#">Text Link</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- main content -->
+    <div id="homepage">
+
+
+    <h2>PRO MAFS</h2>
+
+    <h4><p> Multiply these numbers </p></h4>
+    <h4><p id="mafs"></p></h4>
+    <h4><p id="mafstf"></p></h4>
+    <button onclick="tooSlow()">Submit</button>
+    <h4><p id="label" color="red"></p></h4>
+
+    <img src="https://i.imgflip.com/3njb30.jpg">
+
+    <script type="text/javascript">
+        function rng(){
+          var var1 = Math.round(Math.random()*1000);
+          var var2 = Math.round(Math.random()*1000);
+          document.getElementById("mafs").innerHTML = var1.toString(10) + " * " + var2.toString(10);
+          var tf = document.createElement("INPUT");
+          tf.setAttribute("type", "text");
+          document.getElementById("mafstf").appendChild(tf);
+        }
+
+        function rngNoAppend(){
+          var var1 = Math.round(Math.random()*1000);
+          var var2 = Math.round(Math.random()*1000);
+          document.getElementById("mafs").innerHTML = var1.toString(10) + " * " + var2.toString(10);
+        }
+
+        function tooSlow(){
+          document.getElementById("label").innerHTML = "Too Slow!";
+          rngNoAppend();
+        }
+
+        function getFlag(){
+          document.getElementById("label").innerHTML = "zenseCTF{g1ve_yOuR_maTh3m4tiCiaN_frnD_a_5aMoSa}";
+        }
+    </script>
+   
+      <section id="intro" class="last clear">
+        <article>
+          
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="wrapper row3">
+  <div id="footer" class="clear">
+    <!-- Section One -->
+    <section class="one_quarter">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="one_quarter">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="one_quarter">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="one_quarter lastbox">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+</div>
+<div class="wrapper row4">
+  <footer id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </footer>
+</div>
+</body>
+</html>

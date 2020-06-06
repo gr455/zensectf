@@ -1,0 +1,30 @@
+version: '3'
+services: 
+        db:
+                image: mariadb:10.4
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: passw0rd
+                networks:
+                        data:
+                command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0]
+
+
+        php:
+                build: ./apache_log_poison/
+                restart: always
+                ports:
+                - "14438:80"
+
+        lfi:
+                build: ./path_trav/
+                restart: always
+                ports:
+                - "14437:80"
+        
+                   
+
+networks:
+        data:
+                   
+

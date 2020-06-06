@@ -1,0 +1,7 @@
+
+
+This page's info will not appear on any google search results because of the robots.txt file.
+anyway, here's what you came for
+
+
+zenseCTF{7op_1p3rceNt_of_th3_1P3rcEnt}
