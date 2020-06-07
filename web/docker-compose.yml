@@ -33,6 +33,12 @@ services:
                 restart: always
                 ports:
                 - "14436:80"
+
+        ssrf:
+                build: ./ssrf/
+                restart: always
+                ports:
+                - "14439:80"
         
         
                    

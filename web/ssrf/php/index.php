@@ -244,9 +244,16 @@
 	<div class="row">
 		<div class="col-md-12 sol-sm-12">
 			<div class="maintitle">
-				<h3 class="section-title justtitle">Charity <span class="wow flipInX">&amp; love</span> are the same</h3>
-				<p class="lead bottom0">
-					 Join our awareness campaigns on-site or through the live streams and support the cause.
+				<h3 class="section-title justtitle">Thanks to our partners</h3>
+				<p class="lead bottom0" style="color:black;">
+					<div id="fcorp" style="float: left; width: 50%;">
+					 <p>Lead Sponsor: F-CORP</p>
+					 <img src="assets/img/fcorp.jpg" style="width:50%;height:50%;" >
+					</div>
+					<div id="allsafe" style="float: right; width: 50%;">
+					 <p>Security Partner: Allsafe Cybersecurity</p>
+					 <img src="assets/img/allsafe.jpg" style="width:50%;height:50%;">
+					</div>
 				</p>
 			</div>
 		</div>
@@ -259,7 +266,7 @@
 =============================================== -->
 <section id="credits" class="text-center">
 	</span><br/>
-	Copyright &copy; <a href="#">Your Agency</a> 
+	Copyright &copy; <a href="#">The Whiterose Foundation</a> 
 	<br/>Template By <i class="fa fa-heart"></i> WowThemes.Net
 </section>
 <!-- Bootstrap core JavaScript
