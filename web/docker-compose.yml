@@ -21,6 +21,19 @@ services:
                 restart: always
                 ports:
                 - "14437:80"
+
+        srcflg:
+                build: ./source_flag/
+                restart: always
+                ports:
+                - "14435:80"
+
+        robots:
+                build: ./robots/
+                restart: always
+                ports:
+                - "14436:80"
+        
         
                    
 
