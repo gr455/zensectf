@@ -1,0 +1,20 @@
+
+So I used the tools boxentriq and dcode.fr to solve the question. There could be other methods as well - but I used these two.
+
+So I applied Boxentriq's cipher identifier tool onto the given text. It revealed that it was likely to have been encrypted by base64, and if you are familiar with base64, you'd notice that this assumption
+would seem to be correct. 
+And so I ran it through their base64 tool and got another piece of text : 6D726166725047537B703163753365355F3465335F6731747567217D
+Again, we run it through boxentriq's tool and see that it is likely to be hex encoded. If you are familiar with hex you'd see that this assumption is likely true. 
+And so I ran it through their hex tool to get this - mrafrPGS{p1cu3e5_4e3_g1tug!}
+
+This time however when I ran it through boxentriq it returned that it was of an unknown format. Clicking on that leads you nowhere useful. Of course this challenge has an answer, so let us try somewhere  else.
+
+I used dcode.fr. Problem is it doesn't have a cipher identifier tool - but if you know the cipher, dcode.fr gives the best results out of the tools I know.
+We know that the first few letters are zenseCTF. So ciphertext 'mrafrPGS' corresponds to 'zenseCTF'.
+
+Well we can see that shifting m by 13 corresponds to z, and that shifting the other ciphertext characters by 13 also gives the corresponding plaintext.
+
+Could it be a simple ROT13 cipher? Sure looks like it. Ignoring all the numbers, shift the letters all by 13 to get-
+zenseCTF{c1ph3r5_4r3_t1ght!}
+
+You did it!
