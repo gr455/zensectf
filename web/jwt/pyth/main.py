@@ -6,12 +6,11 @@ from flask import Flask, render_template, make_response, request, redirect
 
 app = Flask(__name__)
 FLAG = "zenseCTF{7his_OnLy_w0rks_1f_yoU_l3t_gO_t0o_99Hj12B}"
-PASSWORD = "temporarysomnsomn"
+PASSWORD = "7thisPasWrdIziMPO55iBle2crck"
 with open("privatekey.pem", "r") as f:
 	PRIVATE_KEY = f.read()
 with open("publickey.pem", "r") as f:
 	PUBLIC_KEY = f.read()
-
 
 @app.route('/', methods=['GET'])
 def home():
@@ -127,4 +126,4 @@ def logout():
 	return resp
 
 if __name__ == "__main__":
-	app.run()
+	app.run(host='0.0.0.0', port=80)

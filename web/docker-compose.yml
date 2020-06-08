@@ -34,8 +34,8 @@ services:
                 ports:
                 - "14436:80"
 
-        ssrf:
-                build: ./ssrf/
+        jwt:
+                build: ./jwt/
                 restart: always
                 ports:
                 - "14439:80"
