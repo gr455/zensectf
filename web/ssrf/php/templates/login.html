@@ -68,9 +68,12 @@ span.psw {
 </head>
 <body>
 
-  <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='assets/css/animate.min.css'>
-  <link rel='stylesheet' href="assets/css/font-awesome.min.css"/>
+  <!-- <link rel='stylesheet' href='assets/css/bootstrap.min.css'> -->
+  <link rel='stylesheet' href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <!-- <link rel='stylesheet' href='assets/css/animate.min.css'> -->
+  <link rel='stylesheet' href="{{ url_for('static', filename='css/animate.min.css') }}">
+  <!-- <link rel='stylesheet' href="assets/css/font-awesome.min.css"/> -->
+  <link rel='stylesheet' href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
   <!-- <link rel='stylesheet' href="assets/css/style.css"/> -->
   
   <!-- Fonts -->
@@ -104,19 +107,19 @@ span.psw {
     </button>
     <!-- Your Logo -->
     <!-- <a href="#hero" class="navbar-brand">THE WHITEROSE <span class="lighter">FOUNDATION</span></a> -->
-    <img src="assets/img/text.png" width="30%" height="30%">
+    <img src="{{url_for('static', filename='img/text.png')}}" width="30%" height="30%">
   </div>
   <!-- Start Navigation -->
   <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
   <ul class="nav navbar-nav">
     <li>
-    <a href="index.php">Home</a>
+    <a href="/">Home</a>
     </li>
     <li>
-    <a href="index.php#about">About</a>
+    <a href="/#about">About</a>
     </li>
     <li>
-    <a href="/login.php">Login</a>
+    <a href="/login">Login</a>
     </li>
   </ul>
   </nav>
@@ -126,26 +129,25 @@ span.psw {
 
 <div style="padding-top: 10%;">
 <h2 align="center">Superusers only login</h2>
-<form action="/action_page.php" method="post">
+<form action="/login" method="post">
   <div class="imgcontainer">
-    <img src="assets/img/text2.png" alt="Avatar" class="non" width="30%" height="30%">
+    <img src="{{url_for('static', filename='img/text2.png')}}" alt="Avatar" class="non" width="30%" height="30%">
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <h4 style="color: red;">{{errors}}</h4>
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
         
     <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
   </div>
+  <input type="hidden" name="action" value="Login">
 </form>
 </div>
 

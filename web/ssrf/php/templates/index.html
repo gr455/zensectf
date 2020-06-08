@@ -9,10 +9,10 @@
 	<title>THE WHITEROSE FOUNDATION </title>
 	
 	<!-- Styles -->
-	<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
-	<link rel='stylesheet' href='assets/css/animate.min.css'>
-	<link rel='stylesheet' href="assets/css/font-awesome.min.css"/>
-	<link rel='stylesheet' href="assets/css/style.css"/>
+	<link rel='stylesheet' href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+	<link rel='stylesheet' href="{{url_for('static', filename='css/animate.min.css')}}">
+	<link rel='stylesheet' href="{{url_for('static', filename='css/font-awesome.min.css')}}"/>
+	<link rel='stylesheet' href="{{url_for('static', filename='css/style.css')}}"/>
 	
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
@@ -45,7 +45,7 @@
 		</button>
 		<!-- Your Logo -->
 		<!-- <a href="#hero" class="navbar-brand">THE WHITEROSE <span class="lighter">FOUNDATION</span></a> -->
-		<img src="assets/img/text.png" width="30%" height="30%">
+		<img src="{{url_for('static', filename='img/text.png')}}" width="30%" height="30%">
 	</div>
 	<!-- Start Navigation -->
 	<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
@@ -57,7 +57,7 @@
 		<a href="#about">About</a>
 		</li>
 		<li>
-		<a href="login.php">Login</a>
+		<a href="/login">Login</a>
 		</li>
 	</ul>
 	</nav>
@@ -66,7 +66,7 @@
 
 <!-- Intro
 	================================================== -->
-<section id="hero" class="section" style="background-image: url('assets/img/whrose.jpg'); background-size: cover;">
+<section id="hero" class="section" style="background-image: url('{{url_for('static', filename='img/whrose.jpg')}}'); background-size: cover;">
 <div class="container">
 	<div class="row">
 		<div class="col-md-5">
@@ -100,7 +100,7 @@
 			</div>
 			<div class="col-md-12 col-sm-6">
 				<div class="service-box wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
-					<img src="assets/img/wong.png" alt="" style="width:30%;height:30%;">
+					<img src="{{url_for('static', filename='img/wong.png')}}" alt="" style="width:30%;height:30%;">
 					<h3>Minister Zhi Zhang 'Whiterose'</h3>
 					<div class="text-left">
 						<p>
@@ -152,7 +152,7 @@
 					<span class="glyphicon glyphicon-usd"></span>
 					<h3>$500M+ Donated</h3>
 					<p>
-						Together by the people and Whiterose.
+						Together by the sponsors and Whiterose.
 					</p>
 					<button type="button" class="btn btn-info btn-md"><a href="#">Learn More</a></button>
 				</div>
@@ -163,7 +163,7 @@
 </section>
 <!-- Random
 	================================================== -->
-<section class="parallax section" style="background-image: ''">
+<section class="parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/4.jpg); ">
 	<div class="wrapsection">
 	<div class="parallax-overlay"></div>
 	<div class="container">
@@ -172,7 +172,7 @@
 				<div class="maintitle">
 					<h3 class="section-title justtitle">Participation is everything</h3>
 					<p class="lead bottom0 wow bounceInUp">
-						Fusce fermentum lectus id turpis suscipit, ut egestas magna volutpat. Donec a purus tellus. Nunc ut dolor eu est gravida auctor quis vitae.
+						The Whiterose Foundation recieves funds from its sponsors and hence does not require you to donate. Your participation is everything for us.
 					</p>
 				</div>
 			</div>
@@ -248,11 +248,11 @@
 				<p class="lead bottom0" style="color:black;">
 					<div id="fcorp" style="float: left; width: 50%;">
 					 <p>Lead Sponsor: F-CORP</p>
-					 <img src="assets/img/fcorp.jpg" style="width:50%;height:50%;" >
+					<a href="https://www.f-corp-usa.com/"> <img src="{{url_for('static', filename='img/fcorp.jpg')}}" style="width:50%;height:50%;" > </a>
 					</div>
 					<div id="allsafe" style="float: right; width: 50%;">
 					 <p>Security Partner: Allsafe Cybersecurity</p>
-					 <img src="assets/img/allsafe.jpg" style="width:50%;height:50%;">
+					 <a href="https://allsafecybersecurity.com.au/"><img src="{{url_for('static', filename='img/allsafe.jpg')}}" style="width:50%;height:50%;"></a>
 					</div>
 				</p>
 			</div>
@@ -272,13 +272,14 @@
 <!-- Bootstrap core JavaScript
 	================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-<script src="assets/js/jquery.localScroll.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/validate.js"></script>
-<script src="assets/js/common.js"></script>
+
+<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/waypoints.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/jquery.scrollTo.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/jquery.localScroll.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/validate.js')}}"></script>
+<script src="{{url_for('static', filename='js/common.js')}}"></script>
 </body>
 </html>

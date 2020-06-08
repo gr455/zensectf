@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="">
+<title></title>
+<meta name="viewport" content="width=1583">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style2.css')}}">
+
+<script src="{{url_for('static', filename='js/da.js')}}"></script>
+</head>
+
+<body>
+<div class="outer">
+  <div class="header">
+    <div class="header-item"><b>黑暗軍隊地圖</b></div
+    ><div class="header-item computer">电脑</div
+    ><div class="header-item folder">文件传输</div
+    ><div class="header-item email">电子邮件</div
+    >{% if admin %}
+    <div class="header-item right"><span>用户帐号: </span><span class="green">whiterose </span><span><a href="/logout" style="color: white;">logout</a></span></div>
+    {% endif %}
+    {% if not admin %}
+    <div class="header-item right"><span>用户帐号: </span><span class="green">cisco </span><span><a href="/logout" style="color: white;">logout</a></span></div>
+    {% endif %}
+  </div>
+  <div class="content">
+    <div class="side">
+      <div class="sub-head first">网络连接</div>
+      <div class="side-item">
+        <div class="label">Total implants:</div
+        ><div class="value">608,018</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Implants online:</div
+        ><div class="value">294,410</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Implants online (3h):</div
+        ><div class="value">325,016</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Implants online (24h):</div
+        ><div class="value">408,009</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Implants online (7 days):</div
+        ><div class="value">495,155</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Implants offline:</div
+        ><div class="value">313,608</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Organizations:</div
+        ><div class="value">1,413</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Windows systems:</div
+        ><div class="value">519,089</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Linux systems:</div
+        ><div class="value">29,011</div>
+      </div>
+      <div class="side-item">
+        <div class="label">OSX systems:</div
+        ><div class="value">34,756</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Network devices:</div
+        ><div class="value">15,162</div>
+      </div>
+
+      <div class="sub-head">访问权</div>
+      <div class="side-item">
+        <div class="label">Local admin rights:</div
+        ><div class="value">89%</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Domain admin rights:</div
+        ><div class="value">15%</div>
+      </div>
+
+      <div class="sub-head">文件和数据</div>
+      <div class="side-item">
+        <div class="label">File transfers (24h)</div
+        ><div class="value">20.9 GB</div>
+      </div>
+      <div class="side-item">
+        <div class="label">File transfers (total)</div
+        ><div class="value">108.1 TB</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Pending file jobs</div
+        ><div class="value">22</div>
+      </div>
+      <div class="side-item">
+        <div class="label">Failed file jobs (24h)</div
+        ><div class="value">80</div>
+      </div>
+      <div class="side-item">
+        <div class="label">E-mail accounts:</div
+        ><div class="value">32,143</div>
+      </div>
+
+      <div class="sub-head">個人信息</div>
+      <div class="side-item">
+        <div class="label">Public key</div
+        ><div class="value"><a href="/publickey.pem">publickey.pem</a></div>
+      </div>
+      {% if admin %}
+      <div class="side-item">
+        <div class="label">Trenton and Mobely confirmation</div
+        ><div class="value"><a href="https://www.whoismrrobot.com/fs/images/origin/articles/article03.pdf">article</a></div>
+      </div>
+      <div class="side-item">
+        <div class="label">Elliot Alderson</div
+        ><div class="value"><a href="/da_highprofiledata/elliota">intel</a></div>
+      </div>
+      {% endif %}
+    </div
+    ><div class="main">
+      <div class="tabs">
+        <div class="tab-item">概要</div>
+        <div class="tab-item active">组织</div>
+        <div class="tab-item">用户</div>
+      </div>
+      <div class="tab-content">
+        <div class="tab-content-left">
+          <div class="filter-wrap"><span class="filter-label">筛选</span><span class="filter"></span></div>
+          <div class="detail-wrap table">
+            <div class="detail-head">
+              <div class="label">组织</div
+              ><div class="value">#</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">US DoS Bureau of Consular Affairs</div
+              ><div class="value">210</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Amnesty International</div
+              ><div class="value">5</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Tibet Action Instutite</div
+              ><div class="value">2</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Washington Township Plant</div
+              ><div class="value">94</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Human Rights Watch</div
+              ><div class="value">4</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">World Uyghur Congress</div
+              ><div class="value">10</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">UK Ministry of Defense</div
+              ><div class="value">308</div>
+            </div>
+            <div class="detail-item">
+              <div class="label">US Office of Personnel Management</div
+              ><div class="value">85</div>
+            </div>
+          </div>
+        </div
+        ><div class="map"><img src="{{url_for('static', filename='img/map.png')}}" alt="World map"></div>
+      </div>
+      <div class="filter-wrap"><span class="filter-label">搜索</span><span class="filter"></span></div>
+      <div class="system-table table">
+        <div class="row-head">
+          <div>识别码</div>
+          <div>位置</div>
+          <div>操作系统</div>
+          <div>安装日期</div>
+          <div>版</div>
+          <div>杀毒软件</div>
+        </div>
+        <div class="row">
+          <div>50.9413° N, 6.9583° E</div
+          ><div class="country de">Germany (DE)</div
+          ><div>Windows 7SP1 (x64)</div
+          ><div>10/23/2015 07:11:41 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>37.8267° N, 122.4230° W</div
+          ><div class="country us">United States (US)</div
+          ><div>Windows 7 (x86)</div
+          ><div>10/23/2015 06:58:26 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>27.1750° N, 78.0422° E</div
+          ><div class="country in">India (IN)</div
+          ><div>Windows 7 (x86)</div
+          ><div>10/23/2015 06:45:44 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>31.2397° N, 121.4998° E</div
+          ><div class="country cn">China (CN)</div
+          ><div>Windows 7 (x86)</div
+          ><div>10/23/2015 06:31:19 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>37.9715° N, 23.7267° E</div
+          ><div class="country gr">Greece (GR)</div
+          ><div>Windows 7 (x64)</div
+          ><div>10/23/2015 06:08:21 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>35.6586° N, 139.7454° E</div
+          ><div class="country jp">Japan (JP)</div
+          ><div>Windows 7 (x64)</div
+          ><div>10/23/2015 05:58:10 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>55.7539° N, 37.6208° E</div
+          ><div class="country ru">Russia (RU)</div
+          ><div>Windows 7 (x64)</div
+          ><div>10/23/2015 05:43:19 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>39.9489° N, 75.1500° W</div
+          ><div class="country us">United Status (US)</div
+          ><div>Windows 7 (x64)</div
+          ><div>10/23/2015 05:32:46 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+        <div class="row">
+          <div>34.3568° S, 18.4740° E</div
+          ><div class="country za">South Africa (ZA)</div
+          ><div>Windows 7 (x64)</div
+          ><div>10/23/2015 05:19:37 am</div
+          ><div>1.7.0.1</div
+          ><div>N/A</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <span><a href="http://www.usanetwork.com/terms" target="_blank">TERMS OF SERVICE</a></span>
+  <span><a href="http://www.nbcuniversal.com/privacy" target="_blank">PRIVACY POLICY</a></span>
+	<span><a href="http://www.usanetwork.com/mrrobot/help" target="_blank">HELP</a></span>
+</div>
+
+<script>
+var AdobeTracking = new Object();
+AdobeTracking.contentType = 'Features';
+AdobeTracking.pageName = 'Timekeeper : Home';
+AdobeTracking.showSite = 'runpsu4';
+AdobeTracking.showSiteFeatureII = 'Timekeeper';
+_satellite.pageBottom();
+</script>
+</body>
+</html>

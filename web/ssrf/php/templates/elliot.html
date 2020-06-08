@@ -1,0 +1,22 @@
+{% if not admin %}
+<h1>Unauthorized</h1>
+{% endif %}
+
+{% if admin %}
+<div style="text-align: center;">
+<h1> Elliot Edward Alderson </h1>
+<img src="{{url_for('static', filename='img/elliot.jpg')}}">
+<br>
+<p>Elliot Alderson is a cybersecurity engineer and vigilante hacker who lives in New York City. He is suspected to be a member of the vigilante hacker group fs0ciety</p>
+<p>Elliot suffers from social anxiety disorder, clinical depression, delusions and paranoia.</p>
+<p><b>Threat: Severe</b></p>
+
+<p>He is not Elliot alderson, he's the mastermind.<a href="https://www.youtube.com/watch?v=mjJCDG5qORI&t=188">This</a> is his reality</p>
+<br><br>
+<p>"Sometimes I dream of saving the world, saving everyone from the invisible hand"</p>
+<br><br>
+<p>If you made it till here, congratulations, you have probably maxed out the web challenges. Now it's time to let go.</p>
+<p>c0ntr01 i$ 4n Il1us1oN. L3t GO</p>
+<p><b>{{flag}}</b></p>
+</div>
+{% endif %}
