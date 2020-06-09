@@ -1,0 +1,9 @@
+version: '3'
+services:
+  guess:
+    build: ./guesslord
+    ports:
+      - "6969:6969"
+    restart: "always"
+    environment:
+      - "PORT=6969"
