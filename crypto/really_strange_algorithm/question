@@ -1,0 +1,7 @@
+This looks a little different from what we know. What can you figure out?
+
+n : 944871823102126331
+e : 65537
+ciphertext : 473671901429173725
+
+Note - When submitting the flag, wrap the obtained plaintext with zensectf{}. In other words, you have to submit as zensectf{<obtained plaintext>}
