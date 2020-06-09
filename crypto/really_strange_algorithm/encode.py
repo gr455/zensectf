@@ -1,4 +1,5 @@
 import math
+import binascii
 from Crypto.Util.number import inverse
 def gcd(x,y):
     if y <= x:
@@ -51,7 +52,7 @@ phi = (p-1)*(q-1)
 
 d = inverse(e,phi) #int((1+phi)/e) #extended_euclid(e,phi)
 print(f'This is d {d}')
-msg = convert_to_message("weakrsaeasy") 
+msg = convert_to_message("weak_rsa_easy") 
 #msg = 2351111819191912351915135
 print(f'msg : {msg}')
 ciphertext = pow(msg,e,n)
@@ -63,5 +64,5 @@ print(f'e : {e}')
 print(f'ciphertext : {ciphertext}')
 
 msg2 = pow(ciphertext,d,n)
-print(f'message2 : {msg2}')
+print(f'message2 : {repr(binascii.unhexlify(hex(msg2)[3:-1]))}')
 
