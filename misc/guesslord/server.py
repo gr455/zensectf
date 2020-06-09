@@ -34,9 +34,9 @@ def client_thread(conn, ip, port, MAX_BUFFER_SIZE = 4096):
         else:
             tries += 1
             if guess < RANDOM_NUMBER:
-                conn.sendall(f"Your guess is lesser than actual number; {40 - tries} tries left\n".encode())
+                conn.sendall(f"Your guess is lesser than actual number; {30 - tries} tries left\n".encode())
             elif guess > RANDOM_NUMBER:
-                conn.sendall(f"Your guess is greater than the actual number; {40 - tries} tries left\n".encode())
+                conn.sendall(f"Your guess is greater than the actual number; {30 - tries} tries left\n".encode())
             else:
                 conn.sendall(f"\n Congratulations! Here is the flag\n{flag}\n".encode())
                 break
