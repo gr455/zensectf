@@ -2,9 +2,10 @@
 
 while true;
 do
-	docker-compose kill -s SIGINT
-	docker-compose up
+	echo "Restarting instances"
+	docker-compose down
+	docker-compose up -d
 
-	sleep 100
+	sleep 300
 
 done;

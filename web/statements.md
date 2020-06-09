@@ -38,7 +38,7 @@ HINT: What is local file inclusion?
 
 dir: apache_log_poisoning
 
-statement: Just like every shady looking website on the internet, the flags site turned out to be a massive scam. They never delivered the flags. The fest is just a few days away and you NEED those flags. Intel has it that the site owner himself has some really good flags that he keeps in his /home, why not steal his?
+statement: Just like every shady looking website on the internet, the flags site turned out to be a massive scam. They never delivered the flags. The fest is just a few days away and you NEED those flags. Intel has it that the site owner himself has some really good flags that he keeps in his /home. But where in his /home?
 
 HINT: What can you do with an apache log file?
 
