@@ -7,3 +7,9 @@ services:
     restart: "always"
     environment:
       - "PORT=6969"
+
+  monster:
+    build: ./monster
+    ports:
+      - "6970:80"
+    restart: "always"
