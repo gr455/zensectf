@@ -1,0 +1,32 @@
+
+This question is inspired from the TJCTF 2020 question, "Titanic". We give them the due credit for designing such an interesting question.
+
+So I did not think too much or even read anything in that document. I just did a Ctrl-A + Ctrl-C and copied everything. 
+I am aware that a lot of extra stuff like page numbers, table of contents, acknowledgements, etc would get copied. Moreover some stuff would get copied multiple times, like the title of the book which    appears on every page. 
+
+Does it matter?
+
+Not exactly, no.
+
+For all practical purposes, collisions have not been found in SHA-256. Or, in English, that means that for almost every single example you are going to see, unique values get hashed to unqiue hashes. You are not going to see 2 different words hashed to the same thing.
+
+That means I don't have to worry about repeating words or copying extra stuff, because as long as the word that actually forms the SHA-256 hash is present, that is enough.
+
+Anyways, the code that is attached is self-explanatory:
+
+import hashlib
+
+reader = open('being_a_boy.txt', 'r').read()            #Read from the book text file
+
+lst = reader.replace("\n", " ").split(" ")
+lst[:] = (value for value in lst if value != '')
+lst[:] = (x.lower() for x in lst)                       #All this is formatting basically, removing punctuations,converting to lowercase, etc. Don't want to explain it all, it is better to understand each                                                         function used for oneself
+s = 'b754015b1f05de447a0915eea5238c1f3310a4826b3190d5b7fe4739bc3bc992'
+print(lst)
+for i in lst:
+    word = "zenseCTF{"+i+"}"                             #Wrapping around
+    hashval = hashlib.sha256(word.encode()).hexdigest()
+    if hashval == s:                                     #Checking equality
+        print(word)
+
+I hope it is clear now
