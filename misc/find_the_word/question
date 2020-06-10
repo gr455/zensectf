@@ -4,7 +4,6 @@ It's time for you to open that book again. But this time, for CTF.
 
 There is a hashing scheme known as SHA-256. Google it, it is really interesting. 
 
-So here is the SHA-256 of the flag : 'b754015b1f05de447a0915eea5238c1f3310a4826b3190d5b7fe4739bc3bc992'
-
 The flag is of the form zenseCTF{some word in the book converted to lowercase}. 
 
+So here is the SHA-256 of the flag (i.e. it is the SHA of zenseCTF{some word...})  : 'b754015b1f05de447a0915eea5238c1f3310a4826b3190d5b7fe4739bc3bc992'
