@@ -1,0 +1,1 @@
+flag = 'zenseCTF{n3x7_7im3_s3l3ct_bett3r_key_74696d650a}'
