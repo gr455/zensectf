@@ -1,0 +1,4 @@
+The college has installed security cameras in the campus. Being a hacker you decide that this would be a nice attack surface and after getting the exact camera model details you download the firmware running on this device. You poke around a bit and find a critical vulnerability.
+Connect to the camera to retrieve the flag. The camera is accessible at <IP>
+
+//Setup a remote server
