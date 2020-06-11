@@ -1,0 +1,7 @@
+This is simple RSA decryption. I highly advise to go through either the picoCTF material or GeeksForGeeks for a good explanation.
+
+You are given p,q and e. We can find phi from p,q, as phi = (p-1)*(q-1).
+
+Then d is the modular inverse of e with respect to phi. You could compute this, or just use inbuilt functions to compute.
+
+Now you have the private key. For a ciphertext c, the plaintext m is simply c^d % n. You are given a list, so iterate through every element and perform the same operation. You will get the answer. 
