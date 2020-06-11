@@ -1,0 +1,3 @@
+This is almost the same as the last question, because the modulus is weak. 
+
+All you have to do is factorize it, whether with your own program or plugging into factordb. Then you get p,q, and it becomes the same as the previous question.

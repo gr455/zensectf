@@ -84,11 +84,18 @@ if __name__ == '__main__':
     #if( gcd(e,p*q) != 1):
     #    print("Completely false")
     print "RSA Encrypter/ Decrypter"
-    p = int(raw_input("Enter a prime number (17, 19, 23, etc): "))
-    q = int(raw_input("Enter another prime number (Not one you entered above): "))
-    e = int(raw_input("Enter e"))
-    n = p*q
-    print "Generating your public/private keypairs now . . ."
+    #p = int(raw_input("Enter a prime number (17, 19, 23, etc): "))
+    #q = int(raw_input("Enter another prime number (Not one you entered above): "))
+    e = int(raw_input("Enter e: "))
+    n = 470598593461
+    root = math.sqrt(n)
+
+    for i in range(1,int(root)+1):
+        if n%i == 0:
+            p = i
+            q = int(n/i)
+
+    #print "Generating your public/private keypairs now . . ."
     public, private = generate_keypair(p, q,e)
     print "Your public key is ", public ," and your private key is ", private
     #message = raw_input("Enter a message to encrypt with your private key: ")
