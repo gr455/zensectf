@@ -5,7 +5,7 @@ from Crypto.Cipher import AES
 from hashlib import md5
 import time
 
-key = md5(str(int(time.time()))).digest()
+key = md5(str(int(time.time()+(86400*5)))).digest()
 padding = 16 - len(flag) % 16
 aes = AES.new(key, AES.MODE_ECB)
 outData = aes.encrypt(flag + padding* str(padding))
