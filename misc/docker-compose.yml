@@ -13,3 +13,17 @@ services:
     ports:
       - "6970:80"
     restart: "always"
+
+  camera:
+    build: ./camera
+    ports:
+      - "6968:22"
+    restart: "always"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Kolkata
+      - SUDO_ACCESS=false #optional
+      - PASSWORD_ACCESS=true #optional
+      - USER_PASSWORD=ismart12 #optional
+      - USER_NAME=camera #optional
