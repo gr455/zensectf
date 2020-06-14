@@ -1,0 +1,16 @@
+
+This is a question I really enjoyed setting, and which I hope you enjoyed solving!
+
+So first things first, subset sum is an NP-hard problem as I mentioned there. Using dp gets it to pseudo-polynomial time which is O( (target sum)* (array size)). I chose not to encrypt the zenseCTF part so that the execution    would be sped up.
+
+Firstly, I have encoded the ASCII words into decimal. You could just do this with ord(c) where c is each character. I have mentioned that only lowercase letters, underscores, and numbers have been used.  Clearly we do not need to analyze any other number in that list then, because we are not just trying to find the subset, we also want the subset to be the flag. Moreover there are a lot of numbers above  1000 even which is way too big to have been encoded from ASCII. And in fact I freely used random.randint() to make the list size bigger xD
+
+So there are a lot of junk values so we need to prune the list down. Without this step it will take forever to execute. So this is mandatory. 
+
+The pruned down list is actually very small - [53, 109, 52, 49, 49, 95, 107, 51, 121]
+
+This is really easy to analyze, as the target sum*size of array is 6174 which is a very low number. So we use the algorithm for subset sum problem (you don't even need to know what it is, you can just    copy-paste from some website honestly it doesn't matter ) and find 6 possible combinations. Out of those 3 are the same, so we actually have only 4. It is trivial to convert these 4 to ASCII and check    which one seems like a possible flag. 
+
+What you need to keep in mind is that due to recursion you get it backwards. So the last character is printed first and the first one last. Meaning the answer you get on conversion is y3k_114m5, but the  actual flag word is flipped, so it is actually 5m411_k3y. The other options you see are nonsensical, and anyways you could just submit all 4 and see which one works ;)
+
+So the answer is finally zenseCTF{5m411_k3y}
