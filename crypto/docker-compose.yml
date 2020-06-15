@@ -1,0 +1,9 @@
+version: '3'
+services:
+  aes:
+    build: ./AES_it
+    ports:
+      - "6967:6967"
+    restart: "always"
+    environment:
+      - "PORT=6969"

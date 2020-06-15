@@ -1,0 +1,18 @@
+So Hemanth knew about Rithwik and hence had a question on a safer side for emergency purposes. He believes this would teach the concepts of AES way better than the previous question.
+
+Connect to `nc chal.zense.co.in 6967` to access the challenge
+
+Message from the author: It is requested that you test the exploit locally first and then try to implement the exploit by connecting.
+
+Steps to reproduce the challenge:
+- Download the file `server.py`
+- Make a file named `secret.py` and add this in your file
+```python3
+FLAG = <some random flag>
+KEY = <some random key>
+```
+- Now fire up the server using `python3 server.py`
+- Now open another terminal and join as client using `nc localhost 6967`
+
+
+Author: keiser

@@ -6,5 +6,6 @@ docker stop $(docker ps -aq)
 
 $(cd web/ ;  docker-compose build);
 $(cd misc/ ; docker-compose build);
+$(cd crypto/ ; docker-compose build);
 
 $(cd web/ ; ./reset.sh) & $(cd misc/ ; ./reset.sh);
