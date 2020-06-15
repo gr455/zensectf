@@ -3,7 +3,7 @@ services:
   aes:
     build: ./AES_it
     ports:
-      - "6967:6967"
+      - "6955:6955"
     restart: "always"
     environment:
-      - "PORT=6969"
+      - "PORT=6955"

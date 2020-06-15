@@ -9,7 +9,7 @@ import socketserver
 from threading import Thread
 from secret import FLAG, KEY
 
-PORT = int(os.environ.get("PORT", 6967))
+PORT = int(os.environ.get("PORT", 6955))
 
 aes = AES.new(KEY, AES.MODE_ECB)
 
