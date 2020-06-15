@@ -3,14 +3,20 @@ This is a question I really enjoyed setting, and which I hope you enjoyed solvin
 
 So first things first, subset sum is an NP-hard problem as I mentioned there. Using dp gets it to pseudo-polynomial time which is O( (target sum)* (array size)). I chose not to encrypt the zenseCTF part so that the execution    would be sped up.
 
-Firstly, I have encoded the ASCII words into decimal. You could just do this with ord(c) where c is each character. I have mentioned that only lowercase letters, underscores, and numbers have been used.  Clearly we do not need to analyze any other number in that list then, because we are not just trying to find the subset, we also want the subset to be the flag. Moreover there are a lot of numbers above  1000 even which is way too big to have been encoded from ASCII. And in fact I freely used random.randint() to make the list size bigger xD
+Firstly, I have encoded the ASCII words into decimal. You could just do this with ord(c) where c is each character. I have mentioned that only lowercase letters, underscores, and numbers have been used.  Clearly we do not need to analyze any other number in that list then, because we are not just trying to find the subset, we also want the subset to be the flag. So what we do is take only those numbers   which could possibly correspond to lowercase letters, numbers, or underscore. In other words we write an if condition if ord('0') <= i <= ord('9') or i == ord('_') or ord('a') <= i <= ord('z') and append to a list.
 
-So there are a lot of junk values so we need to prune the list down. Without this step it will take forever to execute. So this is mandatory. 
+This list is what we operate on. Operating on the given list will not be easy at all due to its huge size. We do not want the other clearly junk values to contribute to the subset sum after all, as that  is of no use. And without pruning it, finding the subset takes too long to be useful here. So this pruning down is a vital step.
 
-The pruned down list is actually very small - [53, 109, 52, 49, 49, 95, 107, 51, 121]
 
-This is really easy to analyze, as the target sum*size of array is 6174 which is a very low number. So we use the algorithm for subset sum problem (you don't even need to know what it is, you can just    copy-paste from some website honestly it doesn't matter ) and find 6 possible combinations. Out of those 3 are the same, so we actually have only 4. It is trivial to convert these 4 to ASCII and check    which one seems like a possible flag. 
+The pruned down list is actually very small (by design of course) - [53, 109, 52, 49, 49, 95, 107, 51, 121, 122, 120, 121, 121, 120, 122, 120, 122, 120, 121, 120, 122]
 
-What you need to keep in mind is that due to recursion you get it backwards. So the last character is printed first and the first one last. Meaning the answer you get on conversion is y3k_114m5, but the  actual flag word is flipped, so it is actually 5m411_k3y. The other options you see are nonsensical, and anyways you could just submit all 4 and see which one works ;)
+
+This is really easy to analyze, as the target_sum * size_of_array is <<< 1e9. So we use the algorithm for subset sum problem (you don't even need to know what it is, you can just copy-paste from some website honestly it doesn't matter ) and get a list of possible combinations (something between 2000-2500 combinations I guess). 
+
+Again this is way too big for us to analyze. So what we do is instead convert the entire flag to characters, you know, like 5m411 becomes small. Then we reverse it, because recursion means the numbers areprinted backwards. So reverse the entire flag.
+
+Then what we do is check if the portions between underscores are English words. Like for small_boy, I check if small and boy are English words. If they are, then convert them back to the number-speak, or 5m411_b0y (according to protocol I mentioned in Discord) and print it out. Iterate through all the possible combinations. I used the Pyenchant library for this but you are free to try other possibilities.
+
+The only option that I found printed was 5m411_k3y, and it got printed multiple times. 
 
 So the answer is finally zenseCTF{5m411_k3y}

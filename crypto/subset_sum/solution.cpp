@@ -8,10 +8,13 @@ using namespace std;
 bool** dp; 
 
 void display(const vector<int>& v) 
-{ 
+{
+       //ofstream myfile;
+	//myfile.open("output.txt");       
 	for (int i = 0; i < v.size(); ++i) 
-		printf("%d ", v[i]); 
-	printf("\n"); 
+		cout << v[i] << " "; 
+	cout << endl; //("\n"); 
+	//myfile.close();
 } 
 
 // A recursive function to print all subsets with the 
@@ -92,7 +95,8 @@ void printAllSubsets(int arr[], int n, int sum)
 // Driver code 
 int main() 
 {
-	int arr[] = {53, 109, 52, 49, 49, 95, 107, 51, 121, 122, 122, 122};
+
+	int arr[] = {53, 109, 52, 49, 49, 95, 107, 51, 121, 122, 120, 121, 121, 120, 122, 120, 122, 120, 121, 120, 122};
 	int n = sizeof(arr)/sizeof(arr[0]); 
 	int sum = 686;
 	printAllSubsets(arr, n, sum); 
