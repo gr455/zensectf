@@ -1,0 +1,9 @@
+version: '3'
+services:
+  bin1:
+    build: ./bin1/
+    ports:
+      - "6701:6701"
+    restart: "always"
+    environment:
+      - "PORT=6701"
