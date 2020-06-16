@@ -28,7 +28,7 @@ def thread_func(conn, ip, port):
         r.sendline(l[1])
         output = r.recv()
         conn.sendall(output)
-    else
+    else:
         conn.sendall(b'Couldnt process output\n')
     conn.close()
     print('Connection '+ip+':'+port+" ended")
