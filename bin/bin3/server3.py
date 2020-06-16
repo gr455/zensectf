@@ -21,7 +21,7 @@ def thread_func(conn, ip, port):
     count = 0
     c = conn.recv(1024)
     l = c.splitlines()
-    if(len(c) == 2):
+    if(len(l) == 2):
         r.sendline(l[0])
         o = r.recvline()
         conn.sendall(o)
