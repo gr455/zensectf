@@ -39,7 +39,7 @@ def encrypt(conn):
         elif choice == b'2':
             conn.sendall(b'Enter your message:\n> ')
             inp = conn.recv(1024).strip()
-            enc = aes.encrypt(pad(inp + FLAG.encode()))
+            enc = aes.encrypt(pad(inp))
             conn.sendall(b"\nEncrypted input\n" + enc.hex().encode() + b"\n")
         else:
             conn.sendall(b"\nOhhh eeesyyy no Hacking here !!!\n")
