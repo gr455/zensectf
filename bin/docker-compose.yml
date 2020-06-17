@@ -8,9 +8,16 @@ services:
     environment:
       - "PORT=6701"
   bin2:
-    build:  ./bin2/
+    build: ./bin2/
     ports:
-      - "6711:6711"
+      - "6702:6702"
     restart: "always"
     environment:
-      - "PORT=6711"
+      - "PORT=6702"
+  bin3:
+    build: ./bin3/
+    ports:
+      - "6703:6703"
+    restart: "always"
+    environment:
+      - "PORT=6703"
