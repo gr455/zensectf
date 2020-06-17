@@ -7,3 +7,10 @@ services:
     restart: "always"
     environment:
       - "PORT=6701"
+  bin2:
+    build:  ./bin2/
+    ports:
+      - "6711:6711"
+    restart: "always"
+    environment:
+      - "PORT=6711"
