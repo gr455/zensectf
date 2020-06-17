@@ -5,7 +5,7 @@ import traceback
 import subprocess
 from threading import Thread
 
-PORT = int(os.environ.get("PORT", 6711))
+PORT = int(os.environ.get("PORT", 6702))
 
 
 def thread_func(conn, ip, port, MAX_BUFFER_SIZE = 201):

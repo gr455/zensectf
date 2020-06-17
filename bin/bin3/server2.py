@@ -7,7 +7,7 @@ import time
 from threading import Thread
 from pwn import *
 
-PORT = int(os.environ.get("PORT", 6717))
+PORT = int(os.environ.get("PORT", 6703))
 
 
 def thread_func(conn, ip, port):
