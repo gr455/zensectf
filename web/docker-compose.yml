@@ -41,17 +41,18 @@ services:
                 - "14439:80"
 
         sqli_db:
-                build: sqli/db
+                build: ./sqli/db
                 network_mode: bridge
+                restart: always
                 environment:
                 - MYSQL_USER=ctf
                 - MYSQL_PASSWORD=Jie2Roh8ohre3Ahn
                 - MYSQL_DATABASE=ctf
-                - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
-        sqli_web:
-                build: sqli/web
+        sqli_www:
+                build: ./sqli/web
                 network_mode: bridge
+                restart: always
                 links:
                 - sqli_db
                 ports:
