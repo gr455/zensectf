@@ -6,12 +6,13 @@ def starter():
     l_ans = [c for c in ans]
     for i in range(len(l_ans)):
         l_ans[i] = chr(rand_map[ord(l_ans[i])-32]+32)
-        l_ans[i] = chr(ord(l_ans[i])-1**(ord(l_ans[i])%2))
+        l_ans[i] = chr(ord(l_ans[i])+pow(-1,(ord(l_ans[i])%2)))
 
     ans = ""
     for i in l_ans:
         ans = ans + str(i)
-    if(ans == "4;ZB;XR gH/SQ3ZAiq/<iA]Ri?{DiU/qjiP6]y]i2RiBw/yw]83O"):
+
+    if(ans == "4=ZB=XR iH1US5ZCks1<kC_RkA}DkW1sjkP6_{_k2RkBy1{y_85Q"):
         print("Kudos! You entered the right key!")
     else:
         print("Work it out further!")
