@@ -50,9 +50,9 @@ We shall be having challenges from the following categories. Beside the category
 - Binary Exploitation(3)
 - Cryptography(7)
 - Forensics(5)
-- Reverse Engineering(5)
+- Reverse Engineering(4)
 - Misc(7)
-- Web(5)
+- Web(6)
 
 Total approximate of challenges - 30 to 40
 
