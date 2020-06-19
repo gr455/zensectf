@@ -9,7 +9,6 @@ def representation(n):
         while(fr != 0):
             l.append(l_map[val])
             fr = fr - 1
-    ind = 0
     f_l = []
     for val in l_map:
         if(l.count(l_map[val]) > 3):
@@ -33,20 +32,17 @@ def container():
     print("Input key:")
     ans = input()
     rstr = ""
-#    print(len(ans))
     for i in range(0,len(ans),2):
-#       print(i)
         if(i != len(ans)-1):
             ad = representation(ord(ans[i])+ord(ans[i+1]))
             sb = representation(abs(ord(ans[i])-ord(ans[i+1])))
-#            print(ad,sb)
-            if(ord(ans[i]) > ord(ans[i])):
+            if(ord(ans[i]) > ord(ans[i+1])):
                 rstr = rstr + ad + "s" + sb + "s"
             else:
                 rstr = rstr + sb + "s" + ad + "s"
         else:
             rstr = rstr + representation(ord(ans[i]))
-    if(rstr == "XXIsCCXXIIIsVsCCXXVsXXXIVsCLXVIIIsXIVsCLIVsIXsCCXXXVIIsLXVIIsCLXIXsLXIIIsCLXVsLXIsCLIXsVIIIsCXCVIIIsLIVsCLsXIXsCCIXsLXVIsCLXIIsLVIIsCLXIsXVsCCVsXXXIXsCXCVsLVIIIsCLXsLXIIsCLXVIsLVsCLXIsXCIIsCLVIIIs"):
+    if(rstr == "CCXXIIIsXXIsVsCCXXVsCLXVIIIsXXXIVsCLIVsXIVsCCXXXVIIsIXsLXVIIsCLXIXsLXIIIsCLXVsLXIsCLIXsCXCVIIIsVIIIsCLsLIVsCCIXsXIXsCLXIIsLXVIsCLXIsLVIIsCCVsXVsXXXIXsCXCVsCLXsLVIIIsCLXVIsLXIIsCLXIsLVsXCIIsCLVIIIs"):
         print("Yup that's the key!, Great Job")
     else:
         print("Try again!")
