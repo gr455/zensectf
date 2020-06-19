@@ -4,11 +4,8 @@ res = "4=ZB=XR iH1US5ZCks1<kC_RkA}DkW1sjkP6_{_k2RkBy1{y_85Q"
 
 l = [c for c in res]
 for i in range(len(l)):
-    print(pow(1,(ord(l[i]))),ord(l[i])%2,-1**0)
     l[i] = chr(ord(l[i])+pow(-1,ord(l[i])%2))
-    print(i,l[i],ord(l[i]))
     l[i] = chr(rand_map.index((ord(l[i])-32))+32)
-    print(i,l[i],ord(l[i]))
 
 ans = ""
 for i in l:
