@@ -92,7 +92,7 @@ if __name__ == '__main__':
     public, private = generate_keypair(p, q,e)
     print "Your public key is ", public ," and your private key is ", private
     #message = raw_input("Enter a message to encrypt with your private key: ")
-    #encrypted_msg = encrypt(private, message)
+    #encrypted_msg = encrypt(public, message)
     #print "Your encrypted message is: "
     #print encrypted_msg
     #print ''.join(map(lambda x: str(x), encrypted_msg))
@@ -101,4 +101,4 @@ if __name__ == '__main__':
     print type(encrypted_msg)
     print "Decrypting message with public key ", public ," . . ."
     print "Your message is:"
-    print decrypt(public, encrypted_msg)
+    print decrypt(private, encrypted_msg)

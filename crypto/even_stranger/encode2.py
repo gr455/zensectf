@@ -87,7 +87,7 @@ if __name__ == '__main__':
     #p = int(raw_input("Enter a prime number (17, 19, 23, etc): "))
     #q = int(raw_input("Enter another prime number (Not one you entered above): "))
     e = int(raw_input("Enter e: "))
-    n = 470598593461
+    n = int(raw_input("Enter n : ")) #470598593461
     root = math.sqrt(n)
 
     for i in range(1,int(root)+1):
@@ -99,13 +99,13 @@ if __name__ == '__main__':
     public, private = generate_keypair(p, q,e)
     print "Your public key is ", public ," and your private key is ", private
     #message = raw_input("Enter a message to encrypt with your private key: ")
-    #encrypted_msg = encrypt(private, message)
+    #encrypted_msg = encrypt(public, message)
     #print "Your encrypted message is: "
     #print encrypted_msg
     #print ''.join(map(lambda x: str(x), encrypted_msg))
     encrypted_msg = input() #[int(x) for x in str(input())]
     #for i in encrypted 
     print type(encrypted_msg)
-    print "Decrypting message with public key ", public ," . . ."
+    print "Decrypting message with private key ", private ," . . ."
     print "Your message is:"
-    print decrypt(public, encrypted_msg)
+    print decrypt(private, encrypted_msg)
