@@ -45,6 +45,5 @@ r = ""
 for i in l:
     r += chr(int(i))
 
-print(l)
 print(r)
 
