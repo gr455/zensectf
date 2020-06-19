@@ -8,7 +8,7 @@ Firstly, I have encoded the ASCII words into decimal. You could just do this wit
 This list is what we operate on. Operating on the given list will not be easy at all due to its huge size. We do not want the other clearly junk values to contribute to the subset sum after all, as that  is of no use. And without pruning it, finding the subset takes too long to be useful here. So this pruning down is a vital step.
 
 
-The pruned down list is actually very small (by design of course) - [53, 109, 52, 49, 49, 95, 107, 51, 121, 122, 120, 121, 121, 120, 122, 120, 122, 120, 121, 120, 122]
+The pruned down list is actually very small (by design of course) - [53, 109, 52, 108, 108, 121, 95, 107, 51, 121, 121, 120, 120, 120, 121, 120, 122, 122, 120, 120, 122, 121, 120, 122] 
 
 
 This is really easy to analyze, as the target_sum * size_of_array is <<< 1e9. So we use the algorithm for subset sum problem (you don't even need to know what it is, you can just copy-paste from some website honestly it doesn't matter ) and get a list of possible combinations (something between 2000-2500 combinations I guess). 
@@ -17,6 +17,6 @@ Again this is way too big for us to analyze. So what we do is instead convert th
 
 Then what we do is check if the portions between underscores are English words. Like for small_boy, I check if small and boy are English words. If they are, then convert them back to the number-speak, or 5m411_b0y (according to protocol I mentioned in Discord) and print it out. Iterate through all the possible combinations. I used the Pyenchant library for this but you are free to try other possibilities.
 
-The only option that I found printed was 5m411_k3y, and it got printed multiple times. Reason is because in the pruned down list there has multiple elements, and do not fall into the trap of trying to    remove these repeated elements out of the frustration of having to go through so many - a character may have been repeated multiple times in the flag so only considering unique elements would not give you the correct subset sum. But anyways, because there are repeated elements, you get multiple subsets which are exactly the same as one subset considers the first instance of the element, another subset has every other element the same but considers another instance of that element, etc. But finally they all give the same word. 
+The only option that I found printed was 5m4ll_k3y, and it got printed multiple times. Reason is because in the pruned down list there has multiple elements, and do not fall into the trap of trying to    remove these repeated elements out of the frustration of having to go through so many - a character may have been repeated multiple times in the flag so only considering unique elements would not give you the correct subset sum. But anyways, because there are repeated elements, you get multiple subsets which are exactly the same as one subset considers the first instance of the element, another subset has every other element the same but considers another instance of that element, etc. But finally they all give the same word. 
 
-So the answer is finally zenseCTF{5m411_k3y}
+So the answer is finally zenseCTF{5m4ll_k3y}
