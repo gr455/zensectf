@@ -3,7 +3,7 @@
 #include<string.h>
 
 void flag(int permission, char* s) {
-	if(!strcmp(s,"Keys")) {
+	if(!strcmp(s,"Keys!")) {
 		if(permission == 1){
 			printf("Alas! you made it!\n");
 			char c;
